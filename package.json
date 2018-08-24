@@ -1,0 +1,36 @@
+{
+  "name": "rx-pg-demo",
+  "version": "1.0.0",
+  "description": "Use RxJs to stream records from postgres",
+  "main": "index.js",
+  "scripts": {
+    "start": "VAULT_TOKEN=root-token VAULT_PATHS=secret/data/rx-pg/local node -r ./vault/vault.js index.js",
+    "migrate": "flyway -c flyway-config.js migrate",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniel-england/rx-pg.git"
+  },
+  "keywords": [
+    "rxjs",
+    "rx-node",
+    "pg",
+    "pg-stream"
+  ],
+  "author": "Dan England",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniel-england/rx-pg/issues"
+  },
+  "homepage": "https://github.com/daniel-england/rx-pg#readme",
+  "dependencies": {
+    "dotenv": "~6.0.0",
+    "node-flywaydb": "^0.1.4",
+    "pg": "^7.4.3",
+    "pg-query-stream": "^1.1.1",
+    "rx-node": "^1.0.2",
+    "rxjs": "^6.2.0",
+    "sync-request": "^6.0.0"
+  }
+}
